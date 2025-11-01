@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - AI Domain Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-btn"><span class="material-icons">brightness_6</span></button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Filters and Export Section -->
+        <section class="filters-and-export card">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date">
+                </div>
+                <div class="filter-group">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date">
+                </div>
+                <div class="filter-group">
+                    <label for="tld-filter">TLD</label>
+                    <select id="tld-filter">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="filter-btn">Apply</button>
+            </div>
+            <div class="export-actions">
+                <button id="export-csv-btn" class="export-btn">Export CSV</button>
+                <button id="export-json-btn" class="export-btn">Export JSON</button>
+            </div>
+        </section>
+
+        <!-- Top Stats Cards -->
+        <section class="stats-cards">
+            <div class="card">
+                <div class="card-icon"><span class="material-icons">language</span></div>
+                <div class="card-info">
+                    <p>Total Domains Generated</p>
+                    <h3 id="total-domains">...</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><span class="material-icons">search</span></div>
+                <div class="card-info">
+                    <p>Total Unique Keywords</p>
+                    <h3 id="total-keywords">...</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><span class="material-icons">star</span></div>
+                <div class="card-info">
+                    <p>Most Popular TLD</p>
+                    <h3 id="top-tld">...</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><span class="material-icons">straighten</span></div>
+                <div class="card-info">
+                    <p>Average Domain Length</p>
+                    <h3 id="avg-length">...</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon"><span class="material-icons">today</span></div>
+                <div class="card-info">
+                    <p>Generated Today</p>
+                    <h3 id="today-count">...</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <div class="chart-container card">
+                <h3>Daily Domain Generation</h3>
+                <canvas id="daily-generation-chart"></canvas>
+            </div>
+            <div class="chart-container card">
+                <h3>Category Distribution</h3>
+                <canvas id="category-distribution-chart"></canvas>
+            </div>
+            <div class="chart-container card">
+                <h3>TLD Distribution</h3>
+                <canvas id="tld-pie-chart"></canvas>
+            </div>
+            <div class="chart-container card">
+                <h3>Top Searched Keywords</h3>
+                <canvas id="keywords-bar-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Tables Section -->
+        <section class="tables-section">
+             <div class="table-container card">
+                <h3>Most Common Categories</h3>
+                <table id="common-categories-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-container card">
+                <h3>Last 50 Generated Domains</h3>
+                <table id="recent-domains-table">
+                    <thead>
+                        <tr>
+                            <th>Keyword</th>
+                            <th>Domain Name</th>
+                            <th>TLD</th>
+                            <th>Category</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

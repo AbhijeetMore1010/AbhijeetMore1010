@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Domain Suggester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">DomainAI</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#domain-suggestions">Domain Suggestions</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="cta-button">Get Domains</button>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Find the Perfect Domain Name Instantly</h1>
+                <p>AI-powered suggestions for your startup, brand, or idea.</p>
+                <div class="search-container">
+                    <input type="text" id="keyword-input" placeholder="Enter your keyword">
+                    <select id="tld-select">
+                        <option value=".com">.com</option>
+                        <option value=".io">.io</option>
+                        <option value=".in">.in</option>
+                    </select>
+                    <button id="generate-button">Generate Suggestions</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">1</div>
+                    <h3>Enter your keyword</h3>
+                    <p>Provide a keyword that represents your brand or idea.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">2</div>
+                    <h3>AI generates suggestions</h3>
+                    <p>Our AI will generate creative and brandable domain names.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">3</div>
+                    <h3>Check availability & register</h3>
+                    <p>Instantly check the availability of your chosen domain.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="domain-suggestions">
+            <h2>Domain Suggestions</h2>
+            <div id="suggestions-grid" class="suggestions-grid">
+                <!-- AI-generated domain cards will be inserted here -->
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <!-- Optional Pricing / Premium Plan section -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="quick-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="twitter-icon.svg" alt="Twitter"></a>
+                <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="instagram-icon.svg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
